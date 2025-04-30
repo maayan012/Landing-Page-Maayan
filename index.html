@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Maayan Shalom | מעיין שלום – AI & Creativity</title>
+  <title>מעיין שלום | Maayan Shalom – AI & Creativity</title>
   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --gradient-start: #30a9ff;
-      --gradient-end:   #7f00ff;
+      --gradient-start: #30a9ff; /* כחול בהיר */
+      --gradient-end:   #7f00ff; /* סגול */
+      /* צבע טקסט הכפתורים – התאמה לגוון הכחול */
+      --button-text:    var(--gradient-start);
     }
 
     * {margin:0;padding:0;box-sizing:border-box;font-family:'Heebo',sans-serif;}
@@ -27,14 +29,22 @@
     h1{font-size:2rem;margin-bottom:0.25rem;}
     h2{font-size:1.05rem;font-weight:300;margin-bottom:1.5rem;opacity:0.9;line-height:1.4;}
 
+    /* ===== כפתורים לבנים ===== */
     .links{width:100%;max-width:500px;display:flex;flex-direction:column;gap:1rem;}
     .links a{
       display:block;width:100%;padding:1rem 1.5rem;border-radius:50px;text-decoration:none;
-      font-size:1rem;color:#fff;
-      background:linear-gradient(135deg,var(--gradient-start),var(--gradient-end));
-      transition:transform 0.2s ease,opacity 0.2s ease,box-shadow 0.2s ease;
+      font-size:1rem;font-weight:500;
+      background:#ffffff;color:var(--button-text);
+      box-shadow:0 4px 12px rgba(0,0,0,0.18);
+      transition:transform 0.15s ease,box-shadow 0.15s ease,background 0.15s ease,color 0.15s ease;
     }
-    .links a:hover{transform:scale(1.04);opacity:0.95;box-shadow:0 0 10px rgba(0,0,0,0.25);} 
+    /* היפוך צבעים בהובר */
+    .links a:hover{
+      transform:scale(1.04);
+      background:var(--button-text);
+      color:#ffffff;
+      box-shadow:0 6px 18px rgba(0,0,0,0.25);
+    }
 
     footer{margin-top:auto;font-size:0.75rem;opacity:0.7;}
   </style>
@@ -42,19 +52,15 @@
 <body>
   <img src="profile.jpg" alt="Maayan Shalom" class="profile-img">
 
-  <h1>Maayan Shalom | מעיין שלום</h1>
+  <h1>מעיין שלום | Maayan Shalom</h1>
   <h2>AI | יצירתיות | חינוך טכנולוגי<br>
       משתפת כלים ודוגמאות לשימוש חכם ב-AI 💡<br>
       מהנדסת | חוקרת חדשנות ובינה מלאכותית
   </h2>
 
-  <!-- ====== כפתורים ====== -->
   <section class="links">
-    <!-- כפתור 1: מדריך סגנונות טרנדיים -->
-    <a href="trendy-styles.html" target="_blank" rel="noopener">מדריך סגנונות טרנדיים ליצירת תמונות עם GPT</a>
-
-    <!-- כפתור 2: מדריך מעבר מונפש -->
-    <a href="animated-transition.html" target="_blank" rel="noopener">מדריך ליצירת מעבר מונפש בין תמונות</a>
+    <a href="trendy-styles.pdf" target="_blank" rel="noopener">מדריך סגנונות טרנדיים ליצירת תמונות עם GPT</a>
+    <a href="animated-transition.pdf" target="_blank" rel="noopener">מדריך ליצירת מעבר מונפש בין תמונות</a>
   </section>
 
   <footer>© 2025 Maayan Shalom</footer>
